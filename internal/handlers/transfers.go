@@ -4,12 +4,13 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"strings"
 	"transfers-api/internal/enums"
 	"transfers-api/internal/known_errors"
 	"transfers-api/internal/models"
+
+	"github.com/gin-gonic/gin"
 )
 
 //go:generate mockery --name TransfersService --structname TransfersServiceMock --filename transfers_service_mock.go --output mocks --outpkg mocks
@@ -17,6 +18,7 @@ import (
 type TransfersService interface {
 	Create(ctx context.Context, transfer models.Transfer) (string, error)
 	GetByID(ctx context.Context, id string) (models.Transfer, error)
+	GetByUserID(ctx context.Context, userID string) ([]models.Transfer, error)
 	Update(ctx context.Context, transfer models.Transfer) error
 	Delete(ctx context.Context, id string) error
 }
@@ -110,6 +112,25 @@ func (h *TransfersHandler) GetByID(ctx *gin.Context) {
 		Amount:     transfer.Amount,
 		State:      transfer.State, // TODO: replace with transfer.State.String()
 	})
+}
+
+func (h *TransfersHandler) GetByUserID(ctx *gin.Context) {
+	// parse query param
+	userID := ctx.Query("user_id")
+
+	// get transfers
+	transfers, err := h.transfersSvc.GetByUserID(ctx.Request.Context(), userID)
+	if err != nil {
+		if errors.Is(err, known_errors.ErrBadRequest) {
+			ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+			return
+		}
+		ctx.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+
+	// return transfers
+	ctx.JSON(http.StatusOK, transfers)
 }
 
 type UpdateTransferRequest struct {

@@ -90,6 +90,43 @@ func (r *TransfersMongoDBRepo) GetByID(ctx context.Context, id string) (models.T
 	}, nil
 }
 
+func (r *TransfersMongoDBRepo) GetByUserID(ctx context.Context, userID string) ([]models.Transfer, error) {
+	filter := bson.M{
+		"$or": bson.A{
+			bson.M{"sender_id": userID},
+			bson.M{"receiver_id": userID},
+		},
+	}
+
+	cursor, err := r.collection.Find(ctx, filter)
+	if err != nil {
+		return nil, fmt.Errorf("error getting transfers for user %s: %w", userID, err)
+	}
+	defer cursor.Close(ctx)
+
+	var transfers []models.Transfer
+	for cursor.Next(ctx) {
+		var dao transferMongoDAO
+		if err := cursor.Decode(&dao); err != nil {
+			return nil, fmt.Errorf("error decoding transfer: %w", err)
+		}
+		transfers = append(transfers, models.Transfer{
+			ID:         dao.ID.Hex(),
+			SenderID:   dao.SenderID,
+			ReceiverID: dao.ReceiverID,
+			Currency:   enums.ParseCurrency(dao.Currency),
+			Amount:     dao.Amount,
+			State:      dao.State, // TODO: replace with enums.ParseState
+		})
+	}
+
+	if err := cursor.Err(); err != nil {
+		return nil, fmt.Errorf("cursor error: %w", err)
+	}
+
+	return transfers, nil
+}
+
 func (r *TransfersMongoDBRepo) Update(ctx context.Context, transfer models.Transfer) error {
 	objID, err := primitive.ObjectIDFromHex(transfer.ID)
 	if err != nil {

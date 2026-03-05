@@ -1,9 +1,10 @@
 package transport
 
 import (
-	"github.com/gin-gonic/gin"
 	"transfers-api/internal/handlers"
 	"transfers-api/internal/logging"
+
+	"github.com/gin-gonic/gin"
 )
 
 //go:generate mockery --name TransfersHandler --structname TransfersHandlerMock --filenametransfers_handler_mock.go --output mocks --outpkg mocks
@@ -11,6 +12,7 @@ import (
 type TransfersHandler interface {
 	Create(ctx *gin.Context)
 	GetByID(ctx *gin.Context)
+	GetByUserID(ctx *gin.Context)
 	Update(ctx *gin.Context)
 	Delete(ctx *gin.Context)
 }
@@ -31,6 +33,7 @@ func NewHTTPServer(transfersHandler TransfersHandler) *HTTPServer {
 
 func (s *HTTPServer) MapRoutes() {
 	s.engine.GET("/transfers/:id", s.transfersHandler.GetByID)
+	s.engine.GET("/transfers", s.transfersHandler.GetByUserID)
 	s.engine.POST("/transfers", s.transfersHandler.Create)
 	s.engine.PUT("/transfers/:id", s.transfersHandler.Update)
 	s.engine.DELETE("/transfers/:id", s.transfersHandler.Delete)

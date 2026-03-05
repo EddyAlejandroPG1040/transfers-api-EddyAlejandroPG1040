@@ -1,0 +1,82 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Qualtop\\Golang\\transfers-api-EddyAlejandroPG1040\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Qualtop\\Golang\\transfers-api-EddyAlejandroPG1040\\go.mod||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:go.mod||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Qualtop\\Golang\\transfers-api-EddyAlejandroPG1040\\cmd\\app\\main.go||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cmd\\app\\main.go||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "go.mod",
+              "DocumentMoniker": "C:\\Qualtop\\Golang\\transfers-api-EddyAlejandroPG1040\\go.mod",
+              "RelativeDocumentMoniker": "go.mod",
+              "ToolTip": "C:\\Qualtop\\Golang\\transfers-api-EddyAlejandroPG1040\\go.mod",
+              "RelativeToolTip": "go.mod",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAINSURBVDhPlVPPaxNBGH1JayiughaxtId682a9iBEh/4Enrz0IFsEaUWwxmpa0tJAuDVRaaPEgiAdPXjzHS8hJCCKCWtuSgFSk/iymyW5DMj\u002Bc79vdATEKfTOPb3a\u002BN2\u002B/md2JIUSpVNLh8J/QWstkMplzHMeNJjgSyEB0OlqIjpZSMJWSTJqjWKlUdLFYlNufP42HyxAPI5tR4x4aRzEeD2TtdhupVCr\u002B4d36cq1Wu8I5zhgopf5rQvA8D\u002BVymbSJarX6hOZ6OWPAQsOZwio/f/2yw5FAKb/ZxMDgAISQyKTHsLm1xbm/KiDkp\u002B6g7\u002Bw5HB\u002B7wewfv4UjFy5ixZ3l/PCpYdYTuhpM5ZfgtFo4Ud9n9vxKQLUOIX13BuY0WRPBGkgpuVQyWZiewODL9ziz9px57PEzqFdvsFaYt28mPcGeQVQB8f78Et7623gRVqS\u002Ba/heE9cnpiEVvUh33wKVoJWGm5vEj/OjWB99yty/tIrDI5fx8EGe810NhBC2gszcIobUT4z0fWM6Q72QR3tw7XYm\u002BCSmk55gDaLFWisUZu\u002Bhv/ERp3dfM096u0iYn\u002BjRSiHYAjUyMrBnUK/XyZhLm8wtYGdjk0mgBd7eHq6mN\u002BxZkZ5gDRqNBpc3l7mJGLWYuWfUTaRmBsGYrp/Rsd7AbsH3/aAs7kGJ/EiRJ/\u002BcIz3BXudsNmtSB4PrurHfmtB30TyJdIAAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-02-25T00:55:32.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.go",
+              "DocumentMoniker": "C:\\Qualtop\\Golang\\transfers-api-EddyAlejandroPG1040\\cmd\\app\\main.go",
+              "RelativeDocumentMoniker": "cmd\\app\\main.go",
+              "ToolTip": "C:\\Qualtop\\Golang\\transfers-api-EddyAlejandroPG1040\\cmd\\app\\main.go",
+              "RelativeToolTip": "cmd\\app\\main.go",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-25T00:46:01.115Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
